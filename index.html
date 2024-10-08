@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Les meilleures pizzas de Lyon</title>
+  <link rel="stylesheet" href="styles.css"> <!-- Lien vers le fichier CSS -->
+  <style>
+    /* Your updated CSS code here */
+  </style>
+</head>
+<body>
+  <header>
+    <h1>🍕 Les meilleures pizzas de Lyon 🍕</h1>
+  </header>
+
+  <main>
+    <div class="card-grid">
+      <!-- Les cartes seront générées ici par le script -->
+    </div>
+  </main>
+
+  <footer>
+    <p>&copy; Gros gourmands</p>
+  </footer>
+
+  <script>
+    const jsonUrl = 'https://raw.githubusercontent.com/niprobin/pizzalyon/refs/heads/main/pizza_sheet_data.json';
+
+    function loadCards() {
+      fetch(jsonUrl)
+        .then(response => response.json())
+        .then(data => {
+          const cardGrid = document.querySelector('.card-grid');
+          cardGrid.innerHTML = ''; // Vide la grille avant d'ajouter les nouvelles cartes
+
+          data.forEach(item => {
+            const card = document.createElement('div');
+            card.classList.add('card');
+
+            // Create a div for the background image
+            const imageDiv = document.createElement('div');
+            imageDiv.classList.add('card-image');
+            imageDiv.style.backgroundImage = `url(${item.image || 'https://via.placeholder.com/300x200'})`; // Use image as background
+
+            const title = document.createElement('h2');
+            title.textContent = item.pizzeria || 'Nom de la pizzeria';
+
+            const subtitle = document.createElement('p');
+            subtitle.textContent = item.lieu || 'Lieu inconnu';
+
+            card.appendChild(imageDiv); // Append the image div
+            card.appendChild(title);
+            card.appendChild(subtitle);
+
+            cardGrid.appendChild(card);
+          });
+        })
+        .catch(error => {
+          console.error('Erreur lors du chargement du JSON:', error);
+        });
+    }
+
+    document.addEventListener('DOMContentLoaded', loadCards);
+  </script>
+</body>
+</html>
