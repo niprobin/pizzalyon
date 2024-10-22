@@ -27,13 +27,12 @@ p {
 body {
   color: #333; /* White text for strong contrast */
   line-height: 1.6;
-  padding: 0 5%;
 }
 
 /* Header styling */
 header {
   text-align: center;
-  margin-bottom: 30px;
+  margin: 30px;
 }
 
 /* Style pour la grille de cartes */
@@ -42,6 +41,7 @@ header {
   grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
   justify-content: space-around;
   grid-gap: 30px;
+  margin: 0% 5%;
 }
 
 /* Style de la carte (repris du précédent exemple) */
@@ -91,7 +91,7 @@ header {
 
 footer {
   margin-top: 50px;
-  padding-top: 20px;
+  padding: 20px;
   width: 100%;
   text-align: center;
   background-color: #333;
