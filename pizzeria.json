@@ -4,5 +4,11 @@
     "rating": 4,
     "address": "La belle adresse",
     "comment": "Le bon commentaire "
+  },
+  {
+    "name": "MARIA.",
+    "rating": 5,
+    "address": "1-3 Rue des Pierres Plantées, 69001 Lyon, France",
+    "comment": "La perfection"
   }
 ]
