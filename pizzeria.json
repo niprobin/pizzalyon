@@ -4,5 +4,11 @@
     "rating": 5,
     "address": "1-3 Rue des Pierres Plantées, 69001 Lyon, France",
     "comment": "La perfection"
+  },
+  {
+    "name": "Falcone",
+    "rating": 5,
+    "address": "15 Rue Mercière, 69002 Lyon, France",
+    "comment": "On y est bien chez Falcone !"
   }
 ]
