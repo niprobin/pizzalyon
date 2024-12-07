@@ -1,5 +1,5 @@
 [build]
   # Folder to deploy (typically for static sites)
-  publish = "dist" # Replace "dist" with the folder where your HTML/CSS/JS files are stored
+  publish = "/" # Replace "dist" with the folder where your HTML/CSS/JS files are stored
   # Location of your Netlify Functions folder
   functions = "netlify/functions"
