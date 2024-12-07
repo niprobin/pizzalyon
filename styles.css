@@ -1,99 +1,32 @@
-/* Reset some default styles */
-@import url("https://fonts.googleapis.com/css2?family=Afacad+Flux:wght@100..1000&family=Neucha&family=Rock+Salt&display=swap");
-
-h1 {
-  font-family: "Afacad Flux", cursive;
-  font-weight: 400;
-  font-style: normal;
-  font-size: 2em;
-}
-
-h2,
-p {
-  font-family: "Afacad Flux", cursive;
-  font-weight: 400;
-  font-style: normal;
-}
-
-body,
-h1,
-h2,
-p {
-  margin: 0;
-  padding: 0;
-}
-
-/* Body styling */
 body {
-  color: #333; /* White text for strong contrast */
-  line-height: 1.6;
+  font-family: Arial, sans-serif;
+  margin: 20px;
 }
-
-/* Header styling */
-header {
-  text-align: center;
-  margin: 30px;
+form {
+  max-width: 400px;
+  margin: auto;
 }
-
-/* Style pour la grille de cartes */
-.card-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
-  justify-content: space-around;
-  grid-gap: 30px;
-  margin: 0% 5%;
+label {
+  display: block;
+  margin-top: 10px;
 }
-
-/* Style de la carte (repris du précédent exemple) */
-.card {
-  box-sizing: border-box;
-  display: flex;
-  align-items: center;
-  border-radius: 4px;
-  justify-content: start;
+input, textarea, button {
   width: 100%;
-  min-height: 160px;
-  box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px,
-    rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+  padding: 8px;
+  margin-top: 5px;
 }
-
-.card-image {
-  width: 40%;
-  height: 100%;
-  border-top-left-radius: 4px;
-  border-bottom-left-radius: 4px;
-  background-position: center;
-  background-size: cover%;
-  background-repeat: no-repeat;
+button {
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  cursor: pointer;
 }
-
-.text-content {
-  box-sizing: border-box;
-  padding: 7px 12px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+button:hover {
+  background-color: #45a049;
 }
-
-.rating {
-  margin-top: 9px;
-  font-size: 18px;
-  font-weight: bold;
-}
-
-.rating:before {
-  content: " ⭐";
-}
-
-.rating:after {
-  content: " / 10";
-}
-
-footer {
-  margin-top: 50px;
-  padding: 20px;
-  width: 100%;
-  text-align: center;
-  background-color: #333;
-  color: #fff;
+pre {
+  background: #f4f4f4;
+  padding: 10px;
+  border: 1px solid #ddd;
+  margin-top: 20px;
 }
