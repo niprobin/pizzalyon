@@ -1,1 +1,8 @@
-[]
+[
+  {
+    "name": "Piizeri",
+    "rating": 4,
+    "address": "La belle adresse",
+    "comment": "Le bon commentaire "
+  }
+]
