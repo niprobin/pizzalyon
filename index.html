@@ -3,29 +3,26 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="./styles.css">
-  <title>Pizzeria Form</title>
+  <title>Ajouter une pizzeria</title>
 
   </head>
 <body>
-  <h1>Pizzeria Feedback Form</h1>
+  <h2>Ajouter une nouvelle pizzeria</h2>
   <form id="pizzeriaForm">
-    <label for="name">Pizzeria Name:</label>
-    <input type="text" id="name" name="name" required="">
+    <label for="name">Nom</label>
+    <input type="text" id="name" name="name" required="true">
     
-    <label for="rating">Rating (1-5):</label>
-    <input type="number" id="rating" name="rating" min="1" max="5" required="">
+    <label for="rating">Note sur 5</label>
+    <input type="number" id="rating" name="rating" min="1" max="5" required="true">
     
-    <label for="address">Address:</label>
-    <input type="text" id="address" name="address" required="">
+    <label for="address">Adresse</label>
+    <input type="text" id="address" name="address" required="true">
     
-    <label for="comment">Comment:</label>
-    <textarea id="comment" name="comment" rows="4" required=""></textarea>
+    <label for="comment">Ton commentaire</label>
+    <textarea id="comment" name="comment" rows="4" required="true"></textarea>
     
-    <button type="submit">Submit</button>
+    <button type="submit">Envoyer</button>
   </form>
-
-  <h2>Generated JSON:</h2>
-  <pre id="output"></pre>
 
   <script>
     const form = document.getElementById('pizzeriaForm');
