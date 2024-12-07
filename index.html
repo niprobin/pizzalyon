@@ -1,29 +1,60 @@
-<!DOCTYPE html>
 <html lang="en">
-<head>
+  <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="./styles.css">
   <title>Pizzeria Form</title>
-</head>
-<body>
+
+  </head>
+<body cz-shortcut-listen="true">
   <h1>Pizzeria Feedback Form</h1>
-  <form id="pizzeria-form">
-    <label for="name">Pizzeria Name</label>
-    <input type="text" id="name" name="name" required>
-  
-    <label for="rating">Rating</label>
-    <input type="number" id="rating" name="rating" min="1" max="5" required>
-  
-    <label for="address">Address</label>
-    <input type="text" id="address" name="address" required>
-  
-    <label for="comment">Comment</label>
-    <textarea id="comment" name="comment" required></textarea>
-  
+  <form id="pizzeriaForm">
+    <label for="name">Pizzeria Name:</label>
+    <input type="text" id="name" name="name" required="">
+    
+    <label for="rating">Rating (1-5):</label>
+    <input type="number" id="rating" name="rating" min="1" max="5" required="">
+    
+    <label for="address">Address:</label>
+    <input type="text" id="address" name="address" required="">
+    
+    <label for="comment">Comment:</label>
+    <textarea id="comment" name="comment" rows="4" required=""></textarea>
+    
     <button type="submit">Submit</button>
   </form>
-  <script src="script.js" defer></script>
 
+  <h2>Generated JSON:</h2>
+  <pre id="output"></pre>
+
+  <script>
+    const form = document.getElementById('pizzeriaForm');
+form.addEventListener('submit', async function (event) {
+  event.preventDefault(); // Prevent the form from submitting the default way
+
+  const formData = new FormData(form);
+  const data = {};
+  formData.forEach((value, key) => {
+    data[key] = key === "rating" ? parseInt(value) : value; // Convert rating to number
+  });
+
+  // Send data to the Netlify function
+  try {
+    const response = await fetch('/.netlify/functions/update-pizzeria', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(data),
+    });
+
+    const result = await response.json();
+    console.log(result); // You can log the result or handle it as needed
+    alert(result.message || "Data saved successfully!");
+  } catch (err) {
+    console.error(err);
+    alert('Error submitting form!');
+  }
+});
+
+</script>
 </body>
 </html>
