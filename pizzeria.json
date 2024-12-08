@@ -10,5 +10,11 @@
     "rating": 5,
     "address": "15 Rue Mercière, 69002 Lyon, France",
     "comment": "On y est bien chez Falcone !"
+  },
+  {
+    "name": "Totò E Peppino",
+    "rating": 5,
+    "address": "2 Rue Duhamel, 69002 Lyon, France",
+    "comment": "La relève de Vico Pizzzza en toute sobriété"
   }
 ]
