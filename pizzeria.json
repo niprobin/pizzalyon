@@ -16,5 +16,11 @@
     "rating": 5,
     "address": "2 Rue Duhamel, 69002 Lyon, France",
     "comment": "La relève de Vico Pizzzza en toute sobriété"
+  },
+  {
+    "name": "AMORE E SAPORI",
+    "rating": 5,
+    "address": "40 Cr de la Liberté, 69003 Lyon, France",
+    "comment": "Simplicité et efficacité ! Rien à redire, grande maitrise."
   }
 ]
